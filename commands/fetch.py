@@ -3,8 +3,8 @@ from lib import fetcher
 
 @click.command()
 def fetch():
-    '''fetch all dependencies.'''
-    fetcher._fetch('target')
+    '''Fetch all dependencies.'''
+    fetcher._fetch('.chest/target')
 
 def inject(group):
     group.add_command(fetch)
