@@ -1,0 +1,10 @@
+[project]
+name = "library.link.elf"
+family = "karma-iot"
+version = "0.1.0"
+maintainer = "tiannian<dtiannian@aliyun.com>"
+upstream = "https://github.com/karma-iot/library"
+arch = [ "general" ]
+platform = [ "general" ]
+[rule.link]
+command = "$ld $flag -o $out $in"

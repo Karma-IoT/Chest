@@ -1,0 +1,14 @@
+[project]
+name = "library.build.cxx"
+family = "karma-iot"
+version = "0.1.0"
+maintainer = "tiannian<dtiannian@aliyun.com>"
+upstream = "https://github.com/karma-iot/library"
+arch = [ "general" ]
+platform = [ "general" ]
+[rule.debug]
+command = "$cxx -MMD -MF $out.d -g $flag -o $out $in"
+depfile = "$out.d"
+[rule.release]
+command = "$cxx -MMD -MF $out.d -Os $flag -o $out $in"
+depfile = "$out.d"

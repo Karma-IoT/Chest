@@ -1,0 +1,13 @@
+[project]
+name = "library.project.bin"
+family = "karma-iot-"
+version = "0.1.0"
+maintainer = "tiannian<dtiannian@aliyun.com>"
+upstream = "https://github.com/karma-iot/library"
+arch = [ "general" ]
+platform = [ "general" ]
+[chest]
+"karma-iot.library.project.git" = "@"
+"karma-iot.library.project.cdir" = "@"
+[init]
+file = [ "include/main.h", "src/main.cpp" ]
