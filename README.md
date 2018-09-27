@@ -1,6 +1,12 @@
 # Chest
-Each `Chest` is a separate code package
 
+> Each `Chest` is a separate code package.
+
+`Chest` is an universal packages manager.
+
+---
+Maintainer:
+- [tiannian](https://github.com/tiannian) [dtiannian@aliyun.com](mailto:dtiannian@aliyun.com)
 
 ## Reference
 
