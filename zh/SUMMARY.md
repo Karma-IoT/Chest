@@ -1,25 +1,29 @@
-# Chest
-- 包
- - chest.toml
- - 构建文件
- - 目标
- - 项目结构
- - 交叉编译
- - 测试
+# Chest Spec
+- Package
+  - chest.toml
+  - 项目结构
+  - 模板
+  - 编译类型
+  - 交叉编译
+  - 测试
 - 全局
- - Sysroot
- - 依赖管理
- - 目标设备
-- 源
- - 签名
- - 账户
- - 源类型
+  - SYSROOT
+  - 依赖
+  - 设备
+  - 源
+  - 账户
+  - 插件
 - 扩展
- - 扩展串口设备
- - 扩展ssh设备
- - 扩展docker设备
- - 扩展Karma OTA设备
- - 扩展github源
- - 扩展ftp源
- - 扩展ipfs源
- 
+  - 模板类型扩展
+  - 设备扩展
+    - 本地设备
+    - 串口设备
+    - ssh设备
+    - docker设备
+    - Karma OTA设备
+  - 源扩展
+    - Github源
+    - File源
+    - HTTP源
+    - FTP源
+    - IPFS源
