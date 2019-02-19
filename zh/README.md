@@ -48,8 +48,8 @@ Maintainer:
 
 ## 实现项目
 
-- [Embedcode](https://github.com/ecode) - 单头文件的Embedcode的C++实现。
-- [Chepp]() - 通用包管理器 `Chest` 的C++实现。
+- [Embedcode](https://github.com/Karma-IoT/ecode) - 单头文件的Embedcode的C++实现。
+- [Chepp](https://github.com/Karma-IoT/Chepp) - 通用包管理器 `Chest` 的C++实现。
 
 ## 参与项目
 
