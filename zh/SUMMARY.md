@@ -8,6 +8,7 @@
   - 测试
 - 全局
   - SYSROOT
+  - Embedcode
   - 依赖
   - 设备
   - 源

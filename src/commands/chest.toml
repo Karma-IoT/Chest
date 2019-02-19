@@ -1,0 +1,6 @@
+[command]
+name = $#<$command.name>
+description = $#<$command.description>
+subcommand = true
+
+[subcommand.]

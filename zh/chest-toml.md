@@ -12,7 +12,7 @@ Project定义了Chest包的主要信息。这些信息用于标识包。
 #### project.family
 > 类型: String
 
-家族名，一般为开发者的名字，标识包所属的域（domain）。与project.name结合共同标记一个包。
+家族名，一般为开发者的名字，标识包所属的域（domain）。与project.name结合作为包的索引（Chest index）共同标记一个包。
 
 #### project.version
 > 类型: String
@@ -71,17 +71,86 @@ Example：
 "tiannian/chest" = "build.cc"
 ```
 
+### Init Section
+
+> 类型: Array of object
+
+Init部分记录了如何去初始化一个项目。初始化过程中，会按照array的顺序依次执行。
+
+Init的每一个object需要存在一个type字段，用于标识需要调用外部`Plugin`类型。
+
+默认需要支持`command`，`filesystem`两个type。
+
+Example:
+
+```
+[[init]]
+type = "command"
+command = "git init"
+
+[[init]]
+type = "filesystem"
+dir = "build"
+
+[[init]]
+type = "filesystem"
+file = "main.c"
+template = "c"
+class = "noos"
+```
+
+### Develop Tool Section
+
+> Table
+
+Develop Tool部分记录了开发时所用的工具。表的key为Package index，value为版本号。
+
+一般来说，此部分所填写的开发过程中用到的工具链，一般是测试用的工具链或者是编译用的工具链。
+
+Example:
+
+```
+[dev-tool]
+avr-gcc = "8.1.0"
+```
+
 ### Tool Section
 
-Tool Section中记录了
+> Table
+
+Develop Tool部分记录了此项目编译时所用到的工具。表的key为Package index，value为版本号。
+
+一般来说，此部分所填写的是代码生成工具，代码分析工具等编译过程中需要使用的工具。
+
+Example:
+
+```
+[dev-tool]
+avr-gcc = "8.1.0"
+```
 
 ### Rule Section
 
+> Table
+
+Rule部分记录了构建一个包所需的构建规则，Rule部分采用ninja-style的方式去编写构建规则。
+
+Example:
+
+```toml
+[rule.cc]
+command = "$cc -MMF -MD $out.d -o $out $in"
+deps = "$out.d"
+```
+
 ### Build Section
 
-### Command Section
+> Table
 
-### Initial Section
+
+
+
+### Command Section
 
 ### Export Section
 
